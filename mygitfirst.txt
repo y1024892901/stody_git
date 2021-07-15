@@ -1,4 +1,0 @@
-my git text demo
-status
-wc,nb
-sb

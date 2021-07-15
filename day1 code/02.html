@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Comppatible" content="ie=edge">
+        <title>Document</title>
+        <script src="./lib/vue-2.4.0.js"></script>
+    </head>
+    <body>
+
+        <div id="app">
+            {{msg}}
+            <p v-text="htt"></p>
+            <div>{{msg2}}</div>
+            <div v-html="msg2"></div>
+
+            <!-- <input type="button" value="这是一个按钮" v-bind:title="mytitle +'123'"> -->
+            <input type="button" value="这是一个按钮" :title="mytitle +'123'" id="btn" >
+            <input type="button" value="anniu" v-on:click="show">
+        </div>
+
+        <script>
+            var vm=new Vue({
+                el: '#app',
+                data:{
+                    msg: 'vue',
+                    htt: '123',
+                    msg2: '<h1>哈哈哈哈零零零零吱吱吱吱</h1>',
+                    mytitle: '自定义标题'
+                },
+                methods:{
+                    show:function(){
+                        alert('hshdhdsih')
+                    }
+                }
+            })
+
+            // document.getElementById('btn').onclick=function(){
+            //     alert('hahaha')
+            // }
+        </script>
+    </body>
+</html>
